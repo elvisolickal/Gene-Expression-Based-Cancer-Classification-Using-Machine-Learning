@@ -1,9 +1,5 @@
 # Machine Learning for Cancer Classification Using Gene Expression Data
 
-![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Completed-success.svg)
 
 ## Overview
 
