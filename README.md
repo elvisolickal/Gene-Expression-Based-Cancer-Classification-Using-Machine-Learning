@@ -192,14 +192,6 @@ pip install -r requirements.txt
 
 ---
 
-## Author
-
-**Elvy**
-
-Electrical and Computer Engineering Student
-
----
-
 ## License
 
 This project is licensed under the MIT License.
