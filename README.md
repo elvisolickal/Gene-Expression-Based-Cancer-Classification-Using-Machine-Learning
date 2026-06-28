@@ -1,120 +1,209 @@
-Machine Learning for Cancer Classification Using Gene Expression Data
+# Machine Learning for Cancer Classification Using Gene Expression Data
 
-Overview
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Completed-success.svg)
 
-This project focuses on classifying five different types of cancer using gene expression (RNA-Seq) data from 801 patients. Each patient sample contains expression values for 20,531 genes. Since not all genes contribute equally to cancer classification, the project applies data preprocessing and feature selection techniques to identify the most informative genes before training multiple machine learning models.
+## Overview
 
-The performance of different classification algorithms is evaluated and compared to determine the most accurate model. Additionally, feature importance analysis is performed to improve the interpretability of the predictions by identifying the genes that contribute most to the classification process.
+This project develops a machine learning pipeline to classify five cancer types using high-dimensional gene expression (RNA-Seq) data from **801 patient samples**. Since each sample contains **20,531 gene expression features**, feature selection techniques are used to reduce dimensionality and retain the most informative genes.
 
-Dataset
+Multiple supervised machine learning algorithms are trained and compared to identify the best-performing model. The project also analyzes feature importance to improve model interpretability by identifying the genes that contribute most to the predictions.
 
-Dataset: TCGA Pan-Cancer HiSeq Gene Expression Dataset
+---
 
-Number of Samples: 801
-Number of Features: 20,531 gene expression values
-Number of Cancer Types: 5
-Cancer Classes
-BRCA (Breast Invasive Carcinoma)
-KIRC (Kidney Renal Clear Cell Carcinoma)
-LUAD (Lung Adenocarcinoma)
-PRAD (Prostate Adenocarcinoma)
-COAD (Colon Adenocarcinoma)
+## Objectives
 
-The dataset consists of:
+- Explore and preprocess gene expression data.
+- Perform feature selection to reduce dimensionality.
+- Train multiple machine learning classification models.
+- Compare model performance using standard evaluation metrics.
+- Identify the best-performing classifier.
+- Interpret predictions using feature importance analysis.
 
-data.csv – Gene expression values
-labels.csv – Corresponding cancer labels
-Objectives
-Explore and understand high-dimensional gene expression data.
-Preprocess and clean the dataset for machine learning.
-Select the most informative genes using feature selection techniques.
-Train multiple supervised machine learning models.
-Compare model performance using standard evaluation metrics.
-Identify the best-performing classifier.
-Interpret predictions using feature importance analysis.
-Project Workflow
+---
+
+## Dataset
+
+**Dataset:** TCGA Pan-Cancer HiSeq Gene Expression Dataset
+
+- **Samples:** 801
+- **Features:** 20,531 genes
+- **Cancer Types:** 5
+
+### Cancer Classes
+
+- BRCA – Breast Invasive Carcinoma
+- COAD – Colon Adenocarcinoma
+- KIRC – Kidney Renal Clear Cell Carcinoma
+- LUAD – Lung Adenocarcinoma
+- PRAD – Prostate Adenocarcinoma
+
+Dataset files:
+
+```
+data.csv
+labels.csv
+```
+
+---
+
+## Project Workflow
+
+```
 Dataset Extraction
+        │
+        ▼
 Data Exploration
+        │
+        ▼
 Data Preprocessing
+        │
+        ▼
 Feature Selection
+        │
+        ▼
 Train-Test Split
+        │
+        ▼
 Model Training
+        │
+        ▼
 Model Evaluation
+        │
+        ▼
 Performance Comparison
+        │
+        ▼
 Feature Importance Analysis
-Final Cancer Type Prediction
-Machine Learning Algorithms
+```
 
-The following supervised learning algorithms are implemented and compared:
+---
 
-Logistic Regression
-Decision Tree
-Random Forest
-Support Vector Machine (SVM)
-K-Nearest Neighbors (KNN)
-Naïve Bayes
-XGBoost (optional)
-Evaluation Metrics
+## Machine Learning Models
 
-Each model is evaluated using:
+The following algorithms are implemented and evaluated:
 
-Accuracy
-Precision
-Recall
-F1-Score
-Confusion Matrix
-Classification Report
-Technologies Used
-Python
-Google Colab
-Pandas
-NumPy
-Matplotlib
-Scikit-learn
-XGBoost (if implemented)
-Expected Outcomes
-Successfully preprocess high-dimensional genomic data.
-Reduce the feature space by selecting informative genes.
-Compare the performance of multiple machine learning classifiers.
-Identify the most accurate model for cancer classification.
-Interpret model predictions through feature importance.
-Build a reliable and explainable cancer classification system.
-Repository Structure
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+- Naïve Bayes
+- XGBoost *(optional)*
+
+---
+
+## Evaluation Metrics
+
+Models are compared using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Confusion Matrix
+- Classification Report
+
+---
+
+## Technologies Used
+
+- Python
+- Google Colab / Jupyter Notebook
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- XGBoost *(optional)*
+
+---
+
+## Project Structure
+
+```
+Machine-Learning-Cancer-Classification/
+│
 ├── data/
 │   ├── data.csv
 │   └── labels.csv
+│
 ├── notebooks/
 │   └── Cancer_Classification.ipynb
-├── models/
+│
 ├── results/
-├── README.md
-└── requirements.txt
-Installation
+│
+├── images/
+│
+├── requirements.txt
+│
+└── README.md
+```
+
+---
+
+## Installation
 
 Clone the repository:
 
-git clone https://github.com/your-username/cancer-classification.git
-cd cancer-classification
+```bash
+git clone https://github.com/your-username/Machine-Learning-Cancer-Classification.git
+cd Machine-Learning-Cancer-Classification
+```
 
-Install the required libraries:
+Install the required packages:
 
+```bash
 pip install -r requirements.txt
-Running the Project
+```
 
-Launch the Jupyter Notebook or Google Colab notebook and execute the cells in order:
+---
 
-Extract the dataset.
-Load the data.
-Perform preprocessing.
-Train and evaluate the models.
-Compare results and analyze feature importance.
-Future Improvements
-Hyperparameter tuning using Grid Search or Random Search.
-Deep learning models for improved performance.
-Cross-validation for more robust evaluation.
-SHAP or LIME for advanced explainable AI.
-Deployment as a web application for real-time predictions.
+## Usage
 
-License
+1. Download the TCGA Pan-Cancer HiSeq dataset.
+2. Place the dataset in the `data/` directory.
+3. Open the notebook in Google Colab or Jupyter Notebook.
+4. Run the notebook sequentially to:
+   - Load and explore the dataset
+   - Preprocess the data
+   - Perform feature selection
+   - Train and evaluate models
+   - Compare results
+   - Analyze feature importance
 
-This project is intended for educational and research purposes.
+---
+
+## Expected Results
+
+- Accurate classification of five cancer types.
+- Reduced feature space through feature selection.
+- Comparative analysis of multiple machine learning models.
+- Identification of the best-performing classifier.
+- Improved interpretability through feature importance analysis.
+
+---
+
+## Future Improvements
+
+- Hyperparameter tuning
+- Cross-validation
+- Deep learning approaches
+- SHAP/LIME explainability
+- Web application deployment
+- Support for additional cancer types
+
+---
+
+## Author
+
+**Elvy**
+
+Electrical and Computer Engineering Student
+
+---
+
+## License
+
+This project is licensed under the MIT License.
